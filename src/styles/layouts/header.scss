@@ -9,5 +9,6 @@
 
   &__wrapper {
     @include flex(row, space-between, center);
+    position: relative;
   }
 }

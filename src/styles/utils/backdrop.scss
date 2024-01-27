@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+
+  transition: $transition;
+
+  &--active {
+    background-color: rgba($color__background--dark);
+    opacity: 0.6;
+  }
+}

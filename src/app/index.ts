@@ -33,3 +33,26 @@ const toggleAccordion = (e: Event) => {
 accordionTriggers.forEach((trigger) => {
   trigger.addEventListener("click", toggleAccordion);
 });
+
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".navigation");
+const backdrop = document.querySelector(".backdrop");
+
+const toggleMenu = (e: Event) => {
+  e.preventDefault();
+
+  const target = e.currentTarget as HTMLElement;
+  const isClosed = target.getAttribute("aria-expanded") === "false";
+
+  if (isClosed) {
+    backdrop?.classList.add("backdrop--active");
+    target.setAttribute("aria-expanded", "true");
+    mobileMenu?.setAttribute("aria-hidden", "false");
+  } else {
+    backdrop?.classList.remove("backdrop--active");
+    target.setAttribute("aria-expanded", "false");
+    mobileMenu?.setAttribute("aria-hidden", "true");
+  }
+};
+
+hamburger?.addEventListener("click", toggleMenu);
