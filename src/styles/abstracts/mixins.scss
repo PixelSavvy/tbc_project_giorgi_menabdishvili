@@ -1,0 +1,51 @@
+// Mobile first media query mixin
+
+// Map of breakpoints
+$breakpoints: (
+  sm: 375px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px,
+);
+
+@mixin mobile($breakpoint) {
+  $min-width: map-get($breakpoints, $breakpoint);
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+// Flexbox mixin
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Grid mixin
+@mixin grid($columns, $justify, $align) {
+  display: grid;
+
+  grid-template-columns: repeat($columns, minmax(0, 1fr));
+
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Generate a mixin to postion an element center
+@mixin center($position: absolute) {
+  position: $position;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Generate a mixin to postion an element
+@mixin position($top, $left) {
+  position: absolute;
+
+  top: $top;
+  left: $left;
+}

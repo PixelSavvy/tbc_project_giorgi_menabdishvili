@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+
+.navigation {
+  &__list {
+    @include flex(row, space-between, center);
+    font-size: 1.4rem;
+
+    gap: 5.4rem;
+
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+
+.header {
+  width: 100%;
+
+  background-color: rgba($color__navigation);
+
+  padding: 2.4rem 0;
+
+  &__wrapper {
+    @include flex(row, space-between, center);
+  }
+}

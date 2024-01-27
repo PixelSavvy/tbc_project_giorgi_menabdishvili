@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: $ff__regular--nocap;
+  font-size: $fs__base;
+  font-weight: $fw__regular;
+  line-height: $lh__base;
+
+  color: rgba($color__foreground);
+  background-color: rgba($color__background--dark);
+
+  min-height: 100dvh;
+  width: 100dvw;
+}

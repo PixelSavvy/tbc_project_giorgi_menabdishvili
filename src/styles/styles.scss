@@ -1,6 +1,6 @@
-@use "base" as *;
-@use "utils" as *;
-@use "components" as *;
-@use "layouts" as *;
-@use "pages" as *;
-@use "themes" as *;
+@use "abstracts";
+@use "base";
+@use "utils";
+@use "components";
+@use "layouts";
+@use "pages";

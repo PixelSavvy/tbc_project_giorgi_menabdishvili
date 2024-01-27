@@ -1,35 +1,17 @@
-// Uppercase
-@font-face {
-  font-family: "tbc-regular--cap";
-  src: url("/fonts/tbc-regular--cap.ttf");
-}
-@font-face {
-  font-family: "tbc-medium--cap";
-  src: url("/fonts/tbc-medium--cap.ttf");
-}
-@font-face {
-  font-family: "tbc-bold--cap";
-  src: url("/fonts/tbc-bold--cap.ttf");
-}
-@font-face {
-  font-family: "tbc-black--cap";
-  src: url("/fonts/tbc-black--cap.ttf");
+@use "../abstracts/" as *;
+
+h1 {
+  font-size: 3.4rem;
 }
 
-// Sentence case
-@font-face {
-  font-family: "tbc-regular--nocap";
-  src: url("/fonts/tbc-regular--nocap.ttf");
+h2 {
+  font-size: 2.4rem;
 }
-@font-face {
-  font-family: "tbc-medium--nocap";
-  src: url("/fonts/tbc-medium--nocap.ttf");
+
+h3 {
+  font-size: 2rem;
 }
-@font-face {
-  font-family: "tbc-bold--nocap";
-  src: url("/fonts/tbc-bold--nocap.ttf");
-}
-@font-face {
-  font-family: "tbc-black--nocap";
-  src: url("/fonts/tbc-black--nocap.ttf");
+
+h4 {
+  font-size: 1.8rem;
 }

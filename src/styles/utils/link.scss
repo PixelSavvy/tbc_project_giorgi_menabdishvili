@@ -1,0 +1,47 @@
+@use "../abstracts/" as *;
+
+// Link styles
+.link {
+  transition: $transition;
+
+  &--primary {
+    &:link,
+    &:visited,
+    &:active {
+      color: rgba($color__accent);
+      font-family: $ff__medium--nocap;
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($color__accent);
+      opacity: 0.8;
+    }
+  }
+
+  &--button:link,
+  &--button:visited,
+  &--button:active {
+    display: inline-block;
+    background-color: rgba($color__accent);
+    padding: 0.8rem 3.2rem;
+    border-radius: 0.5rem;
+  }
+
+  &--button:hover,
+  &--button:focus {
+    background-color: rgba($color__foreground);
+    color: rgba($color__background--dark);
+  }
+}
+
+.navigation__link {
+  &:hover,
+  &:focus {
+    color: rgba($color__accent);
+  }
+
+  &--active {
+    color: rgba($color__accent);
+  }
+}

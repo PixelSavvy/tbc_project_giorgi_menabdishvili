@@ -1,0 +1,58 @@
+@use "../abstracts/" as *;
+
+.footer {
+  width: 100%;
+  padding: 6.4rem 0 4rem;
+
+  background-color: rgba($color__navigation);
+
+  &__wrapper {
+    @include flex(row, space-between, stretch);
+
+    width: 100%;
+    min-height: 100%;
+  }
+
+  &__info {
+    @include flex(column, space-between, start);
+    gap: 2.8rem;
+
+    font-size: 1.4rem;
+  }
+
+  &__logo {
+    width: 10rem;
+    height: 3rem;
+
+    & > img {
+      height: 100%;
+    }
+  }
+
+  &__copy {
+    @include flex(column, space-between, start);
+    gap: 2rem;
+  }
+
+  &__action {
+    @include flex(column, stretch, end);
+  }
+
+  &__social {
+    @include flex(row, end, center);
+    gap: 1rem;
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+
+    & > img {
+      height: 100%;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+  }
+}
