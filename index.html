@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./src/app/index.ts" defer></script>
+    <script src="./src/app/index.ts" type="module" defer></script>
     <link rel="stylesheet" href="./src/styles/styles.scss" />
     <title>Vite + TS</title>
   </head>
@@ -126,20 +126,36 @@
             <!-- navigation list -->
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="/" class="navigation__link link">მთავარი</a>
-              </li>
-              <li class="navigation__item">
-                <a href="/" class="navigation__link link">TBC IT</a>
+                <a
+                  href="https://www.tbcacademy.ge/"
+                  target="_blank"
+                  class="navigation__link link"
+                  >მთავარი</a
+                >
               </li>
               <li class="navigation__item">
                 <a
-                  href="/"
+                  href="https://www.tbcacademy.ge/it-academy"
+                  target="_blank"
+                  class="navigation__link link"
+                  >TBC IT</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="https://www.tbcacademy.ge/usaid"
+                  target="_blank"
                   class="link navigation__link navigation__link--active"
                   >TBC x USAID</a
                 >
               </li>
               <li class="navigation__item">
-                <a href="/" class="link navigation__link">რისკები</a>
+                <a
+                  href="https://www.tbcacademy.ge/risks-academy"
+                  target="_blank"
+                  class="link navigation__link"
+                  >რისკები</a
+                >
               </li>
             </ul>
             <!-- hamburger -->
@@ -154,118 +170,170 @@
 
       <!-- ! Main -->
       <main class="main">
+        <!--! Hero cover -->
+        <section class="hero">
+          <div class="hero__cover"></div>
+          <div class="hero__heading container">
+            <h1>
+              <span class="block">TBC x USAID</span>
+              <span>ტექნოლოგიური განათლებისთვის</span>
+            </h1>
+          </div>
+          <div class="hero__content">
+            <div class="container">
+              <p class="hero__description">
+                „ TBC x USAID - ტექნოლოგიური განათლებისთვის “ პროგრამა
+                საინფორმაციო ტექნოლოგიებით დაინტერესებულ ადამიანებს გთავაზობთ
+                სრულად დაფინანსებულ ონლაინ საგანმანათლებლო პრაქტიკულ კურსებს
+                სხვადასხვა ICT მიმართულებით. წარმატებულ კურსდამთავრებულებს
+                ეძლევათ შესაძლებლობა დასაქმდნენ თიბისისა და მის პარტნიორ
+                კომპანიებში.
+              </p>
+              <a
+                href="https://www.tbcacademy.ge/usaid-about"
+                target="_blank"
+                class="link link--secondary hero__link"
+                >გაიგე მეტი</a
+              >
+            </div>
+          </div>
+        </section>
+
         <div class="main__wrapper container">
+          <!-- courses -->
           <section class="section course">
             <div class="section__heading">
               <h2>სასწავლო კურსები</h2>
             </div>
-            <ul class="course__list">
-              <li class="course__item">
-                <div class="course__item-cover">
-                  <img
-                    src="/public/img/webp/course-cards/card__ios--cover.webp"
-                    alt="a man building a mobile app ui on an ipad with an apple pencil"
-                  />
-                </div>
-
-                <div class="course__item-content">
-                  <h3 class="course__item-heading">iOS Development</h3>
-                  <p class="course__item-status">რეგისტრაცია დასრულებულია</p>
-                  <div class="course__item-link">
-                    <svg
-                      preserveAspectRatio="xMidYMid meet"
-                      data-bbox="1.833 2.667 13.334 10.666"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="1.833 2.667 13.334 10.666"
-                      height="16"
-                      width="17"
-                      data-type="color"
-                      role="presentation"
-                      aria-hidden="true"
-                    >
-                      <g>
+            <ul class="course__list"></ul>
+          </section>
+          <!-- faq -->
+          <section class="section faq">
+            <div class="section__heading">
+              <h2>ხშირად დასმული კითხვები</h2>
+              <a
+                href="https://www.tbcacademy.ge/usaid-faq"
+                target="_blank"
+                class="link link--secondary"
+                >ყველა კითხვა</a
+              >
+            </div>
+            <div class="accordion">
+              <ul class="accordion__list">
+                <li class="accordion__item" aria-expanded="false">
+                  <button class="accordion__trigger">
+                    <h3>როგორ ხდება კურსზე რეგისტრაცია და შერჩევა?</h3>
+                    <div class="accordion__arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="white"
+                      >
                         <path
-                          fill="#00aeef"
-                          d="m10.3 2.867 4.667 4.666a.645.645 0 0 1 0 .934L10.3 13.133a.644.644 0 0 1-.933 0 .644.644 0 0 1 0-.933L12.9 8.667H2.5c-.4 0-.667-.267-.667-.667s.267-.667.667-.667h10.4L9.367 3.8a.605.605 0 0 1-.2-.467c0-.2.066-.333.2-.466a.644.644 0 0 1 .933 0Z"
-                          data-color="1"
+                          class="arrowDown"
+                          d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
                         ></path>
-                      </g>
-                    </svg>
-                    <a href="/" class="link link--primary">კურსის დეტალები</a>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="accordion__content">
+                    <p>კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:</p>
+                    <ol>
+                      <li>
+                        <span>I ეტაპი</span> - პირველ ეტაპზე საჭიროა, შეავსო
+                        სასურველი კურსისთვის განკუთვნილი სარეგისტრაციო ფორმა,
+                        რომელიც განთავსებულია კურსის შიდა გვერდზე. კურსზე
+                        რეგისტრაციის დასრულების შემდეგ დაიწყება შემოსული
+                        განცხადებების გადარჩევა.
+                      </li>
+                      <li>
+                        <span>II ეტაპი</span> - შერჩევის მეორე ეტაპი კურსების
+                        მიხედვით განსხვავებულია, ზოგიერთი კურსისთვის მოიცავს
+                        პრე-ტესტს, ზოგიერთ კურსზე კი უნარების ტესტს, სადაც
+                        მინიმალური ზღვარის გადალახვის შემთხვევაში გადახვალ
+                        შერჩევის შემდეგ ეტაპზე.
+                      </li>
+                      <li>
+                        <span> III ეტაპი</span> - მესამე ეტაპი კურსების მიხედვით
+                        განსხვავდება: Advance კურსებზე, სადაც მოითხოვება
+                        გარკვეული ტექნიკური ცოდნა, მონაწილეებმა უნდა დაწერონ
+                        ტექნიკური ტესტი ცოდნის დონის შესამოწმებლად, ხოლო
+                        კურსებზე, სადაც რაიმე ტიპის წინასწარი ცოდნა მოთხოვნილი
+                        არ არის უნდა შეასრულოთ ტექნიკური დავალება, რაც თქვენი
+                        კვლევისა და თვითსწავლის უნარს ამოწმებს.
+                      </li>
+                      <li>
+                        <span>IV ეტაპი</span> - შერჩევის ბოლო მეოთხე ეტაპი
+                        მოიცავს გასაუბრებას შესარჩევ კომისიასთან. გასაუბრების
+                        წარმატებით გავლის შემთხვევაში ჩაირიცხებით კურსზე და
+                        გაფორმდება შესაბამისი ხელშეკრულება.
+                      </li>
+                    </ol>
+                    <p>
+                      &ast; სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია,
+                      ყურადღებით წაიკითხო კურსის აღწერა, ნახო რას ისწავლი კურსის
+                      განმავლობაში და გაიგო გააჩნია თუ არა კურსს დასწრების
+                      წინაპირობა.
+                    </p>
                   </div>
-                </div>
-              </li>
-              <li class="course__item">
-                <div class="course__item-cover">
-                  <img
-                    src="/public/img/webp/course-cards/card__ios--cover.webp"
-                    alt="a man building a mobile app ui on an ipad with an apple pencil"
-                  />
-                </div>
-
-                <div class="course__item-content">
-                  <h3 class="course__item-heading">iOS Development</h3>
-                  <p class="course__item-status">რეგისტრაცია დასრულებულია</p>
-                  <div class="course__item-link">
-                    <svg
-                      preserveAspectRatio="xMidYMid meet"
-                      data-bbox="1.833 2.667 13.334 10.666"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="1.833 2.667 13.334 10.666"
-                      height="16"
-                      width="17"
-                      data-type="color"
-                      role="presentation"
-                      aria-hidden="true"
-                    >
-                      <g>
+                </li>
+                <li class="accordion__item" aria-expanded="false">
+                  <button class="accordion__trigger">
+                    <h3>შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?</h3>
+                    <div class="accordion__arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="white"
+                      >
                         <path
-                          fill="#00aeef"
-                          d="m10.3 2.867 4.667 4.666a.645.645 0 0 1 0 .934L10.3 13.133a.644.644 0 0 1-.933 0 .644.644 0 0 1 0-.933L12.9 8.667H2.5c-.4 0-.667-.267-.667-.667s.267-.667.667-.667h10.4L9.367 3.8a.605.605 0 0 1-.2-.467c0-.2.066-.333.2-.466a.644.644 0 0 1 .933 0Z"
-                          data-color="1"
+                          class="arrowDown"
+                          d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
                         ></path>
-                      </g>
-                    </svg>
-                    <a href="/" class="link link--primary">კურსის დეტალები</a>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="accordion__content">
+                    <p>
+                      TBC X USAID ტექნოლოგიური განათლებისთვის პროგრამაში თითოეულ
+                      კანდიდატს აქვს მხოლოდ ერთი კურსის გავლის შესაძლებლობა.
+                      გარდა Information Security და Python კურსებისა, სადაც
+                      Basic დონის გავლის შემდეგ შესაძლებელია სწავლის გაგრძელება
+                      Advance დონეზე.
+                    </p>
                   </div>
-                </div>
-              </li>
-              <li class="course__item">
-                <div class="course__item-cover">
-                  <img
-                    src="/public/img/webp/course-cards/card__ios--cover.webp"
-                    alt="a man building a mobile app ui on an ipad with an apple pencil"
-                  />
-                </div>
-
-                <div class="course__item-content">
-                  <h3 class="course__item-heading">iOS Development</h3>
-                  <p class="course__item-status">რეგისტრაცია დასრულებულია</p>
-                  <div class="course__item-link">
-                    <svg
-                      preserveAspectRatio="xMidYMid meet"
-                      data-bbox="1.833 2.667 13.334 10.666"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="1.833 2.667 13.334 10.666"
-                      height="16"
-                      width="17"
-                      data-type="color"
-                      role="presentation"
-                      aria-hidden="true"
-                    >
-                      <g>
+                </li>
+                <li class="accordion__item" aria-expanded="false">
+                  <button class="accordion__trigger">
+                    <h3>რა ღირს სწავლა პროგრამის ფარგლებში?</h3>
+                    <div class="accordion__arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="white"
+                      >
                         <path
-                          fill="#00aeef"
-                          d="m10.3 2.867 4.667 4.666a.645.645 0 0 1 0 .934L10.3 13.133a.644.644 0 0 1-.933 0 .644.644 0 0 1 0-.933L12.9 8.667H2.5c-.4 0-.667-.267-.667-.667s.267-.667.667-.667h10.4L9.367 3.8a.605.605 0 0 1-.2-.467c0-.2.066-.333.2-.466a.644.644 0 0 1 .933 0Z"
-                          data-color="1"
+                          class="arrowDown"
+                          d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
                         ></path>
-                      </g>
-                    </svg>
-                    <a href="/" class="link link--primary">კურსის დეტალები</a>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="accordion__content">
+                    <p>
+                      პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია
+                      თიბისი ბანკისა და USAID-ის მიერ.
+                    </p>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </section>
         </div>
       </main>

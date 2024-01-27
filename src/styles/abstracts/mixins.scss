@@ -34,8 +34,8 @@ $breakpoints: (
 }
 
 // Generate a mixin to postion an element center
-@mixin center($position: absolute) {
-  position: $position;
+@mixin center() {
+  position: absolute;
 
   top: 50%;
   left: 50%;

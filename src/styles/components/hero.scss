@@ -1,0 +1,58 @@
+@use "../abstracts/" as *;
+
+.hero {
+  &__cover {
+    position: relative;
+
+    background: url("/public/img/webp/hero/hero__mobile--cover.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 30rem;
+    width: 100dvw;
+
+    @include mobile(md) {
+      background: url("/public/img/webp/hero/hero__desktop--cover.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @include mobile(lg) {
+      background: url("/public/img/webp/hero/hero__desktop--cover.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    max-width: 98rem;
+    width: 100%;
+    margin: 0 auto;
+
+    text-align: left;
+    font-family: $ff__bold--cap;
+  }
+
+  &__content {
+    background-color: rgba($color__background--light);
+  }
+
+  &__description {
+    padding: $section__padding;
+
+    font-size: 2.8rem;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 6rem;
+  }
+}

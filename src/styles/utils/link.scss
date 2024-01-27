@@ -19,6 +19,22 @@
     }
   }
 
+  &--secondary {
+    &:link,
+    &:visited,
+    &:active {
+      color: rgba($color__accent);
+      font-family: $ff__medium--nocap;
+      font-size: 2rem;
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($color__foreground);
+      opacity: 0.6;
+    }
+  }
+
   &--button:link,
   &--button:visited,
   &--button:active {

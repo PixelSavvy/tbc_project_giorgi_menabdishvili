@@ -11,6 +11,12 @@ $color__accent: 6 174 243;
 
 $color__muted: 148 148 148;
 
+$border__color--dark: rgba(148, 148, 148, 0.1);
+$border__color--light: rgba(148, 148, 148, 0.8);
+
+$border__dark: 1px solid $border__color--dark;
+$border__light: 0.4px solid $border__color--light;
+
 // Font family
 $ff__regular--cap: "tbc-regular--cap";
 $ff__medium--cap: "tbc-medium--cap";
@@ -40,5 +46,6 @@ $lh__base: 1.6;
 $section__padding--sm: 3.2rem 2.4rem 4rem;
 
 $transition: all 0.25s ease-in;
+$transition__accordion: max-height 0.2s ease-in-out;
 
 $section__padding: 4rem 0;
