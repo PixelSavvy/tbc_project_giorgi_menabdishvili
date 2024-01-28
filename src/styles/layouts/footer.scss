@@ -7,40 +7,44 @@
   background-color: rgba($color__navigation);
 
   &__wrapper {
-    @include flex(row, space-between, stretch);
-
-    width: 100%;
-    min-height: 100%;
-  }
-
-  &__info {
-    @include flex(column, space-between, start);
-    gap: 2.8rem;
+    @include grid(2, space-between, end);
+    gap: 3.2rem;
 
     font-size: 1.4rem;
   }
 
   &__logo {
+    grid-column: 1 / -1;
     width: 10rem;
-    height: 3rem;
 
-    & > img {
-      height: 100%;
+    @include mobile(md) {
+      grid-column: 1 / 2;
     }
   }
 
   &__copy {
     @include flex(column, space-between, start);
+    grid-column: 1 / -1;
     gap: 2rem;
-  }
 
-  &__action {
-    @include flex(column, stretch, end);
+    @include mobile(md) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
   }
 
   &__social {
     @include flex(row, end, center);
+
+    grid-column: 2 /3;
+    grid-row: 2 / 3;
+
     gap: 1rem;
+
+    @include mobile(md) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
   }
 
   &__icon {
@@ -53,6 +57,15 @@
   }
 
   &__link {
-    margin-top: auto;
+    grid-column: 1/ 2;
+    grid-row: 2/3;
+    font-size: 1.6rem;
+
+    @include mobile(md) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+
+      margin-left: auto;
+    }
   }
 }

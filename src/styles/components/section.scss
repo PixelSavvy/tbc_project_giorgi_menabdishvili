@@ -1,11 +1,71 @@
 @use "../abstracts/" as *;
 
 .section {
-  padding: $section__padding;
+  padding: $section__padding--sm;
   width: 100%;
+
+  @include mobile(md) {
+    padding: $section__padding--md;
+  }
+
+  @include mobile(lg) {
+    padding: $section__padding--lg;
+  }
+
+  @include mobile(xl) {
+    padding: $section__padding--xl;
+  }
 
   &__heading {
     @include flex(row, space-between, center);
     margin-bottom: 5.4rem;
+  }
+}
+
+.course {
+  padding-inline: 0;
+}
+
+.faq {
+  @include grid(1, center, center);
+
+  @include mobile(md) {
+    @include grid(2, center, start);
+  }
+
+  .section__heading {
+    grid-column: 1 / -1;
+
+    @include mobile(md) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  }
+
+  .accordion {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    @include mobile(md) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  }
+
+  .faq__link {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+
+    text-align: center;
+
+    margin-top: 5.6rem;
+
+    @include mobile(md) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+
+      margin-top: 0;
+      text-align: right;
+    }
   }
 }
