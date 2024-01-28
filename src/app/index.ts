@@ -1,11 +1,24 @@
-import { courseData } from "@/data";
+import { MobileMenu } from "./navigation/index";
+import { Carousel } from "./carousel/Index";
+import { Accordion } from "./accordion";
+
 import { renderCourseList } from "./courses/courseItem";
-import { mobileMenuInstance } from "./navigation";
-import { accordionInstance } from "./accordion";
+import { renderSlides } from "./carousel/renderSlides";
+
+import { carouselData } from "@/data/carouselData";
+import { courseData } from "@/data";
 
 const init = () => {
-  mobileMenuInstance;
-  accordionInstance;
+  const mobileMenuInstance: MobileMenu = new MobileMenu(
+    ".hamburger",
+    ".navigation",
+  );
+  const carouselInstance = new Carousel();
+  const accordionInstance = new Accordion(
+    ".accordion__trigger",
+    ".accordion__content",
+  );
+  renderSlides(carouselData);
   renderCourseList(courseData);
 };
 

@@ -1,4 +1,4 @@
-class MobileMenu {
+export class MobileMenu {
   private hamburger: HTMLElement | null;
   private mobileMenu: HTMLElement | null;
   private backdrop: HTMLDivElement | null;
@@ -11,10 +11,10 @@ class MobileMenu {
     this.header = document.querySelector(".header");
     this.backdrop = null;
 
-    this.addEventListeners();
+    this.init();
   }
 
-  private addEventListeners() {
+  public init() {
     this.hamburger?.addEventListener("click", this.toggleMenu.bind(this));
     window.addEventListener("scroll", this.toggleHeaderOnScroll.bind(this));
   }
@@ -76,5 +76,3 @@ class MobileMenu {
     }
   }
 }
-
-export const mobileMenuInstance = new MobileMenu(".hamburger", ".navigation");

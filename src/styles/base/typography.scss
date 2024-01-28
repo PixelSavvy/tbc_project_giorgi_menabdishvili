@@ -1,7 +1,15 @@
 @use "../abstracts/" as *;
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 2.4rem;
+
+  @include mobile(md) {
+    font-size: 3.2rem;
+  }
+
+  @include mobile(lg) {
+    font-size: 4.2rem;
+  }
 }
 
 h2 {

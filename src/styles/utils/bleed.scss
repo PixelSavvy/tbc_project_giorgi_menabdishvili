@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+.bleed {
+  box-shadow: 0 0 0 100vmax rgba($color__background--light);
+  clip-path: inset(0 -100vmax);
+}

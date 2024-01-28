@@ -10,7 +10,11 @@
 
     border-top: $border__dark;
     border-bottom: $border__dark;
-    padding-top: 2.4rem;
+    padding-top: 1.6rem;
+
+    @include mobile(md) {
+      padding-top: 1.8rem;
+    }
 
     &:first-child {
       border-top: none;
@@ -34,6 +38,7 @@
 
   &__content {
     font-size: 1.4rem;
+    line-height: 2;
 
     overflow: hidden;
     max-height: 0;

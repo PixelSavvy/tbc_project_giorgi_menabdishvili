@@ -1,4 +1,4 @@
-class Accordion {
+export class Accordion {
   private accordionTriggers: NodeListOf<HTMLElement>;
   private accordionContents: NodeListOf<HTMLElement>;
 
@@ -58,8 +58,3 @@ class Accordion {
     if (!isClosed) closeAccordion();
   }
 }
-
-export const accordionInstance = new Accordion(
-  ".accordion__trigger",
-  ".accordion__content",
-);
