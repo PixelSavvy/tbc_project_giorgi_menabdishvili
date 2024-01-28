@@ -1,7 +1,8 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/გიორგი მენაბდიშვილი/tbc_project_giorgi_menabdishvili">
-    <img src="" alt="Logo" width="80" height="80">
+  <a href="https://github.com/PixelSavvy/tbc_project_giorgi_menabdishvili">
+    <img src="https://static.wixstatic.com/media/93e8a3_03d83d668a5f417ca646a5e511f8c02a%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/93e8a3_03d83d668a5f417ca646a5e511f8c02a%7Emv2.png" alt="Logo" width="80" height="80">
+  
   </a>
 
   <h3 align="center">TBC x USAID-ის გვერდი</h3>
