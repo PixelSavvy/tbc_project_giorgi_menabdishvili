@@ -16,6 +16,7 @@
   }
 
   &__item {
+    @include flex(column, stretch, start);
     border-radius: 1rem;
     border: $border__light;
     overflow: hidden;
@@ -33,13 +34,11 @@
   }
 
   &__item-content {
-    @include flex(column, stretch, start);
+    @include flex(column, space-between, start);
+    height: 100%;
 
     gap: 2.4rem;
-    padding: 3.2rem 2.4rem;
-  }
-
-  &__item-heading {
+    padding: 2.4rem;
   }
 
   &__item-status {
