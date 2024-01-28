@@ -15,6 +15,17 @@
   background-color: rgba($color__background--dark);
 
   transition: $transition__mobile-menu;
+
+  @include mobile(md) {
+    @include flex(row, space-between, center);
+    position: static;
+    opacity: 1;
+    width: 100%;
+    min-height: min-content;
+
+    background-color: transparent;
+  }
+
   &__list {
     @include flex(column, start, end);
     gap: 4rem;
@@ -23,9 +34,9 @@
 
     @include mobile(md) {
       @include flex(row, space-between, center);
-      font-size: 1.4rem;
 
-      gap: 5.4rem;
+      gap: 4rem;
+      padding: 0;
 
       margin-left: auto;
     }
@@ -33,6 +44,10 @@
 
   &__item {
     font-size: 2.4rem;
+
+    @include mobile(md) {
+      font-size: 1.6rem;
+    }
   }
 }
 

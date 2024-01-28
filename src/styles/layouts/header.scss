@@ -1,14 +1,31 @@
 @use "../abstracts/" as *;
 
 .header {
+  position: sticky;
+  top: -10rem;
+  z-index: 100;
+
   width: 100%;
 
   background-color: rgba($color__navigation);
 
   padding: 2.4rem 0;
 
+  transition:
+    top 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
+
+  @include mobile(md) {
+    top: 0;
+  }
+
   &__wrapper {
     @include flex(row, space-between, center);
     position: relative;
   }
+}
+
+.header[aria-hidden="false"] {
+  top: 0;
+  background-color: $color__navigation--sticky;
 }

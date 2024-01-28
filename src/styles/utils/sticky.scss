@@ -1,0 +1,6 @@
+.sticky {
+  position: fixed;
+  inset: 0;
+  top: 0; /* Set the top property to 0 */
+  z-index: 1000; /* Adjust z-index if needed */
+}

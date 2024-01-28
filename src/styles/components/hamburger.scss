@@ -8,6 +8,10 @@
   gap: 1.2rem;
   cursor: pointer;
 
+  @include mobile(md) {
+    display: none;
+  }
+
   &__bar {
     display: inline-block;
     width: 100%;
