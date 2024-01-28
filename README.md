@@ -16,13 +16,15 @@
 * [გამოყენებული ინსტრუმენტები](#გამოყენებული-ინსტრუმენტები)
 * [პროექტის სტრუქტურა](#პროექტის-სტრუქტურა)
 * [დასაწყისი](#დასაწყისი)
-  * [პრერექვიზიტები](#prerequisites)
-  * [ინსტალაცია](#installation)
-* [გამოყენება](#usage)
+  * [პრერექვიზიტები](#პრერექვიზიტები)
+  * [ინსტალაცია](#ინსტალაცია)
+* [გამოყენება](#გამოყენება)
 
 ## პროექტის შესახებ
 
-![Screen Shot](images/screenshot.png)
+<img width="1439" alt="image" src="https://github.com/PixelSavvy/tbc_project_giorgi_menabdishvili/assets/142541220/f16e1551-bc04-409f-b974-30e53898df68">
+
+
 
 პროექტი მიზნად ისახავდა TBC x USAID მთავარი გვერდის კლონის აწყობას HTML,CSS და Javascript-ის გამოყენებით. მთავარი მიზნის მისაღწევად, დასახული იყო შემდეგი პუქნტები:
 1. გვერდის ძირითადი დიზაინ სისტემის გადმოღება - ფერები, ტიფოგრაფია და ა.შ.
@@ -55,7 +57,7 @@ npm install npm@latest -g
 1. რიპოზიტორიის კლონირება
 
 ```sh
-git clone [https://github.com/your_username_/Project-Name.git](https://github.com/PixelSavvy/tbc_project_giorgi_menabdishvili.git)
+git clone https://github.com/PixelSavvy/tbc_project_giorgi_menabdishvili.git
 ```
 
 2. npm პაკეტების დაყენება
