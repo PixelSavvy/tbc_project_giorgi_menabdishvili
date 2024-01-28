@@ -44,7 +44,7 @@
 
 <img width="404" alt="image" src="https://github.com/PixelSavvy/tbc_project_giorgi_menabdishvili/assets/142541220/394fe7a4-7629-4bd9-b400-6c805e22fbfc">
 
-## დაწყება
+## დასაწყისი
 
 ### პრერექვიზიტები
 
