@@ -76,7 +76,7 @@ export class MobileMenu {
     const isClosed = this.hamburger?.getAttribute("aria-expanded") === "false";
 
     if (isClosed) this.openMenu();
-    this.closeMenu();
+    else this.closeMenu();
   }
 }
 

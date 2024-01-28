@@ -42,7 +42,7 @@ export class Accordion {
     this.closeAllAccordions();
 
     if (isClosed) this.openAccordion(content, arrow, target);
-    this.closeAccordion(content, arrow, target);
+    else this.closeAccordion(content, arrow, target);
   }
 
   private openAccordion(

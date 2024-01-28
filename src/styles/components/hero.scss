@@ -28,11 +28,7 @@
   }
 
   &__heading {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-
+    @include center();
     max-width: 98rem;
     width: 100%;
     margin: 0 auto;
