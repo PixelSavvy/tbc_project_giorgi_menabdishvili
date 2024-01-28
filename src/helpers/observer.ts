@@ -5,6 +5,7 @@ export const observer = (
 ) => {
   if (!element) return;
 
+  // Callback function to execute when the observer is triggered
   const observerCallback: IntersectionObserverCallback = (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
@@ -15,13 +16,15 @@ export const observer = (
     });
   };
 
+  // Options for the observer
   const observerOptions: IntersectionObserverInit = {
     root: null,
     rootMargin: `${rootMargin}px`,
     threshold: threshold,
   };
 
+  // Create the observer
   const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-  return observer.observe(element);
+  // Start observing the target element
+  observer.observe(element);
 };

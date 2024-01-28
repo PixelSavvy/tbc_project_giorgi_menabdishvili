@@ -4,9 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./src/app/index.ts" type="module" defer></script>
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="https://static.wixstatic.com/media/93e8a3_03d83d668a5f417ca646a5e511f8c02a%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/93e8a3_03d83d668a5f417ca646a5e511f8c02a%7Emv2.png"
+      type="image/png"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://static.wixstatic.com/media/93e8a3_03d83d668a5f417ca646a5e511f8c02a%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/93e8a3_03d83d668a5f417ca646a5e511f8c02a%7Emv2.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://static.wixstatic.com/media/93e8a3_03d83d668a5f417ca646a5e511f8c02a%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/93e8a3_03d83d668a5f417ca646a5e511f8c02a%7Emv2.png"
+      type="image/png"
+    />
+    <script src="./src/app/app.ts" type="module" defer></script>
     <link rel="stylesheet" href="./src/styles/styles.scss" />
-    <title>Vite + TS</title>
+    <title>TBC x USAID</title>
   </head>
   <body>
     <div class="flex">
@@ -260,7 +276,10 @@
             <div class="accordion">
               <ul class="accordion__list">
                 <li class="accordion__item" aria-expanded="false">
-                  <button class="accordion__trigger">
+                  <button
+                    class="accordion__trigger"
+                    aria-label="expand accordion"
+                  >
                     <h3>როგორ ხდება კურსზე რეგისტრაცია და შერჩევა?</h3>
                     <div class="accordion__arrow">
                       <svg
@@ -319,7 +338,10 @@
                   </div>
                 </li>
                 <li class="accordion__item" aria-expanded="false">
-                  <button class="accordion__trigger">
+                  <button
+                    class="accordion__trigger"
+                    aria-label="expand accordion"
+                  >
                     <h3>შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?</h3>
                     <div class="accordion__arrow">
                       <svg
@@ -347,7 +369,10 @@
                   </div>
                 </li>
                 <li class="accordion__item" aria-expanded="false">
-                  <button class="accordion__trigger">
+                  <button
+                    class="accordion__trigger"
+                    aria-label="expand accordion"
+                  >
                     <h3>რა ღირს სწავლა პროგრამის ფარგლებში?</h3>
                     <div class="accordion__arrow">
                       <svg
@@ -381,7 +406,11 @@
       <footer class="footer">
         <div class="footer__wrapper container">
           <div class="footer__logo">
-            <img src="/public/img/webp/logo/logo.webp" alt="TBC ბანკის ლოგო" />
+            <img
+              src="/public/img/webp/logo/logo.webp"
+              alt="TBC ბანკის ლოგო"
+              loading="lazy"
+            />
           </div>
           <div class="footer__copy">
             <span>&copy; 2023 ყველა უფლება დაცულია</span>
@@ -394,6 +423,7 @@
                 ><img
                   src="/public/img/webp/social-media/social__facebook--logo.webp"
                   alt="Facebook ლოგო"
+                  loading="lazy"
               /></a>
             </li>
             <li class="footer__icon">
@@ -404,6 +434,7 @@
                 <img
                   src="/public/img/webp/social-media/social__youtube--logo.webp"
                   alt="Youtube ლოგო"
+                  loading="lazy"
                 />
               </a>
             </li>

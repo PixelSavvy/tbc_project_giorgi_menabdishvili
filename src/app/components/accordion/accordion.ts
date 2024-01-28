@@ -1,15 +1,14 @@
 export class Accordion {
+  // Define the types
   private accordionTriggers: NodeListOf<HTMLElement>;
   private accordionContents: NodeListOf<HTMLElement>;
 
   constructor(triggerSelector: string, contentSelector: string) {
     this.accordionTriggers = document.querySelectorAll(triggerSelector);
     this.accordionContents = document.querySelectorAll(contentSelector);
-
-    this.init();
   }
 
-  private init() {
+  public init() {
     this.accordionContents.forEach((content) => {
       content.setAttribute("aria-hidden", "true");
     });
@@ -19,6 +18,7 @@ export class Accordion {
     });
   }
 
+  // Close all accordions when one is open
   private closeAllAccordions() {
     this.accordionContents.forEach((content) => {
       const trigger = content.previousElementSibling as HTMLElement;
@@ -31,6 +31,7 @@ export class Accordion {
     });
   }
 
+  // Open and close the accordion Item
   private toggleAccordion(e: Event) {
     const target = e.currentTarget as HTMLElement;
     const content = target.nextElementSibling as HTMLElement;
@@ -40,21 +41,34 @@ export class Accordion {
 
     this.closeAllAccordions();
 
-    const openAccordion = () => {
-      content.style.maxHeight = content.scrollHeight + "px";
-      arrow.style.transform = "rotate(-180deg)";
-      target.setAttribute("aria-expanded", "true");
-      content.setAttribute("aria-hidden", "false");
-    };
+    if (isClosed) this.openAccordion(content, arrow, target);
+    this.closeAccordion(content, arrow, target);
+  }
 
-    const closeAccordion = () => {
-      content.style.maxHeight = "0";
-      arrow.style.transform = "rotate(0deg)";
-      target.setAttribute("aria-expanded", "false");
-      content.setAttribute("aria-hidden", "true");
-    };
+  private openAccordion(
+    content: HTMLElement,
+    arrow: HTMLElement,
+    target: HTMLElement,
+  ) {
+    content.style.maxHeight = content.scrollHeight + "px";
+    arrow.style.transform = "rotate(-180deg)";
+    target.setAttribute("aria-expanded", "true");
+    content.setAttribute("aria-hidden", "false");
+  }
 
-    if (isClosed) openAccordion();
-    if (!isClosed) closeAccordion();
+  private closeAccordion(
+    content: HTMLElement,
+    arrow: HTMLElement,
+    target: HTMLElement,
+  ) {
+    content.style.maxHeight = "0";
+    arrow.style.transform = "rotate(0deg)";
+    target.setAttribute("aria-expanded", "false");
+    content.setAttribute("aria-hidden", "true");
   }
 }
+
+export const accordionInstance = new Accordion(
+  ".accordion__trigger",
+  ".accordion__content",
+);
